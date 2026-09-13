@@ -26,9 +26,24 @@ Return recipe suggestions and eventually the recipe instructions to the user, if
 """
 
 from langchain.agents import create_agent
+from langgraph.checkpoint.memory import InMemorySaver
+from langchain.messages import HumanMessage
 
+config = {"configurable": {"thread_id": "1"}}
 agent = create_agent(
-    model="gpt-5-nano",
+    model="google_genai:gemini-3.6-flash",
     tools=[web_search],
+    checkpointer=InMemorySaver(),
     system_prompt=system_prompt
 )
+config = {"configurable": {"thread_id": "1"}}
+
+response = agent.invoke(
+    {"messages": [HumanMessage(content="I have chicken, rice, and broccoli. What can I make with these ingredients?")]},
+    config)
+print(response['messages'][-1].content)
+
+
+from pprint import pprint
+
+pprint(response)
