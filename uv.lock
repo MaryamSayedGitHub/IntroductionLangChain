@@ -1193,6 +1193,7 @@ dependencies = [
     { name = "langchain-openai" },
     { name = "langchain-tavily" },
     { name = "langchain-text-splitters" },
+    { name = "langchain-xai" },
     { name = "langgraph" },
     { name = "langgraph-api" },
     { name = "langgraph-cli" },
@@ -1200,6 +1201,7 @@ dependencies = [
     { name = "matplotlib" },
     { name = "mcp" },
     { name = "mcp-server-time" },
+    { name = "pygraphviz" },
     { name = "pypdf" },
     { name = "python-dotenv" },
     { name = "reportlab" },
@@ -1227,6 +1229,7 @@ requires-dist = [
     { name = "langchain-openai", specifier = ">=1.1.14" },
     { name = "langchain-tavily", specifier = ">=0.2.13" },
     { name = "langchain-text-splitters", specifier = ">=1.1.2" },
+    { name = "langchain-xai", specifier = ">=1.3.0" },
     { name = "langgraph", specifier = ">=1.0.3" },
     { name = "langgraph-api", specifier = ">=0.5.37" },
     { name = "langgraph-cli", specifier = ">=0.4.9" },
@@ -1234,6 +1237,7 @@ requires-dist = [
     { name = "matplotlib", specifier = ">=3.11.2" },
     { name = "mcp", specifier = ">=1.21.1,<2" },
     { name = "mcp-server-time", specifier = "<=2026.7.10" },
+    { name = "pygraphviz", specifier = ">=2.0.2" },
     { name = "pypdf", specifier = ">=6.13.3" },
     { name = "python-dotenv", specifier = ">=1.2.0" },
     { name = "reportlab", specifier = ">=5.0.1" },
@@ -1925,6 +1929,21 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/26/9f/6c545900fefb7b00ddfa3f16b80d61338a0ec68c31c5451eeeab99082760/langchain_text_splitters-1.1.2.tar.gz", hash = "sha256:782a723db0a4746ac91e251c7c1d57fd23636e4f38ed733074e28d7a86f41627", size = 293580, upload-time = "2026-04-16T14:20:39.162Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/d3/26/1ef06f56198d631296d646a6223de35bcc6cf9795ceb2442816bc963b84c/langchain_text_splitters-1.1.2-py3-none-any.whl", hash = "sha256:a2de0d799ff31886429fd6e2e0032df275b60ec817c19059a7b46181cc1c2f10", size = 35903, upload-time = "2026-04-16T14:20:38.243Z" },
+]
+
+[[package]]
+name = "langchain-xai"
+version = "1.3.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "aiohttp" },
+    { name = "langchain-core" },
+    { name = "langchain-openai" },
+    { name = "requests" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/cd/69/d6dda0484482b74cfc7c6e3812587c7a57face6b74f519bc01aa12a1cd07/langchain_xai-1.3.0.tar.gz", hash = "sha256:81924cdf5061108d424bd7a4a52ad72a96e3a2d20da47b16ef2531da667ba866", size = 211202, upload-time = "2026-07-21T16:15:29.522Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/4a/4d/08a2494344e728c7a159d5f2eba5255a76bdef9f72222d622921d3971684/langchain_xai-1.3.0-py3-none-any.whl", hash = "sha256:a40e0664a8bdf9eb31fed73998d88b7f49610ad596bc4a115d0270ad22a09098", size = 12942, upload-time = "2026-07-21T16:15:28.317Z" },
 ]
 
 [[package]]
@@ -2970,6 +2989,24 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/49/2e/ced460408999b33da6b31b0021b0f37d329e202d4169aeb164493778f25b/pygments-2.21.0.tar.gz", hash = "sha256:610ca751c9bc2492b38eb9a38a7fbc93edbbb2d7182edaf34e66ae493dee5c8c", size = 5005329, upload-time = "2026-08-17T08:02:48.824Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/71/46/17f022dd3e953bf20a04a028a21ec746d942f8d2af30fa0f124fa0e6a684/pygments-2.21.0-py3-none-any.whl", hash = "sha256:2363c69b61c4a97c838da3b130dcd6468f4848992b21a82f2a63ec34377137d9", size = 1250147, upload-time = "2026-08-17T08:02:44.912Z" },
+]
+
+[[package]]
+name = "pygraphviz"
+version = "2.0.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/b9/bf/66361b6c75e97d80e294d8642a258167315a2128d06bdc947cebddf5edf7/pygraphviz-2.0.2.tar.gz", hash = "sha256:e3a0a0da443af50277f98de0a73932a8f3fc3dc39685911e94b58111e153a8cc", size = 82229, upload-time = "2026-09-16T16:32:06.508Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/94/af/7d3f884e81e2486dadbcb8d32a41a379d86487769259244c26f7598fa434/pygraphviz-2.0.2-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:9e0ccc8488a58552756b08dd12bd7cc0ae5627f6e20809f714dfe5d6830b9909", size = 1412225, upload-time = "2026-09-16T16:31:32Z" },
+    { url = "https://files.pythonhosted.org/packages/bb/03/42e4dd3973858160a6a34f1e66f9ef91e93f35c15a82690ea2d7235c0ea0/pygraphviz-2.0.2-cp312-cp312-macosx_11_0_x86_64.whl", hash = "sha256:47b69f7c90def3eedb990228f69159240333ee978b7422b53d7f5e3eee0a30de", size = 1585017, upload-time = "2026-09-16T16:31:33.781Z" },
+    { url = "https://files.pythonhosted.org/packages/17/76/f1974fa760f840e8fc1a3c843cfa7836d5ba204f1e033d78096c296ea411/pygraphviz-2.0.2-cp312-cp312-manylinux_2_28_aarch64.whl", hash = "sha256:453c9024e7c1331ed95ebc2389035ba038976645d16f80a0b8f69849379583d3", size = 5156244, upload-time = "2026-09-16T16:31:35.818Z" },
+    { url = "https://files.pythonhosted.org/packages/26/e5/00e5e0349d6a37876785bffb599d6ebf8aeb71a20f80a69fb4088eccf8ba/pygraphviz-2.0.2-cp312-cp312-manylinux_2_28_x86_64.whl", hash = "sha256:1a460bfd55e8c3b0794982745ffb0fada2853332d5baf9d5d28ab85f3b43cec8", size = 5503273, upload-time = "2026-09-16T16:31:37.474Z" },
+    { url = "https://files.pythonhosted.org/packages/b3/48/6f5fb1217b113df916d3bfe920ee2c96c5b27f8f8b7a5a89764aad2c7b7d/pygraphviz-2.0.2-cp312-cp312-win_amd64.whl", hash = "sha256:c81e283a621e912f0531223baf0c411bbe1a0cc8737794f0356ab78c0647f3b2", size = 6842617, upload-time = "2026-09-16T16:31:39.137Z" },
+    { url = "https://files.pythonhosted.org/packages/f6/44/747e0067e806cef85f2618d77dc7f12ac5e65d14e8d5c29375f24561ec54/pygraphviz-2.0.2-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:2d5098eb466b97d3b54cc3a5577e2b0f4886cc3a386be16fa8e5ddacbf85a3d6", size = 1411905, upload-time = "2026-09-16T16:31:40.752Z" },
+    { url = "https://files.pythonhosted.org/packages/c1/c1/766a739605808e3fca80d2a486a7bea959bc9fafee8d7f533c488bc17b99/pygraphviz-2.0.2-cp313-cp313-macosx_11_0_x86_64.whl", hash = "sha256:6639045835c5ae10a04e29e7f9d6a1b5fce1ce0606b18aa96810d06f487ea90c", size = 1584757, upload-time = "2026-09-16T16:31:42.202Z" },
+    { url = "https://files.pythonhosted.org/packages/51/5c/a435a7b9116e043b671febbeb5bd36a19453d6216b6bc842e5e13f60de2e/pygraphviz-2.0.2-cp313-cp313-manylinux_2_28_aarch64.whl", hash = "sha256:99627f97603cab971880708f6561b79f6e6ca3a1a9e5592ff0f74d223f3893ea", size = 5154520, upload-time = "2026-09-16T16:31:43.697Z" },
+    { url = "https://files.pythonhosted.org/packages/b1/44/71caa8f5782ffd26d86add7cfe4375cc313765d254e105e90c40222da9af/pygraphviz-2.0.2-cp313-cp313-manylinux_2_28_x86_64.whl", hash = "sha256:69746b912d688fc495be2abbec3c80eb1db449e0bf4874cbee0ceea3cc561063", size = 5501365, upload-time = "2026-09-16T16:31:45.537Z" },
+    { url = "https://files.pythonhosted.org/packages/4f/58/5f412e92fdba24975e2bf2ed6a3b76fcde19f3d2fb8da62e1e163fb181b5/pygraphviz-2.0.2-cp313-cp313-win_amd64.whl", hash = "sha256:5306586aec1ce29f603b4a11e3d270fa9aff626e897e03dfeaa1d649c0530562", size = 6842436, upload-time = "2026-09-16T16:31:47.095Z" },
 ]
 
 [[package]]
